@@ -28,6 +28,10 @@ class FakeConsole : Console {
         this.inputLinesSubject.onNext(line)
     }
 
+    fun resetOutputLines() {
+        this.outputLinesSubject = ReplaySubject.create()
+    }
+
     override fun getLines(): Observable<String> {
         return this.linesSubject
     }

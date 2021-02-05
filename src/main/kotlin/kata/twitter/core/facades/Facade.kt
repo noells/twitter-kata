@@ -17,7 +17,7 @@ class Facade(private val repository: PostRepository, private val console: Consol
         this.repository.save(post)
     }
 
-    override fun followUser() {
+    override fun followUser(follower: String, followed: String) {
         TODO("Not yet implemented")
     }
 

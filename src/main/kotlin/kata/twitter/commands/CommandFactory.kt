@@ -9,7 +9,7 @@ class CommandFactory(
     fun from(command: String): Command {
         return when {
             command.contains("->") -> CreatePostCommand(useCases, command)
-            command.contains("follow") -> FollowUserCommand(useCases, command)
+            command.contains("follows") -> FollowUserCommand(useCases, command)
             command.contains("wall") -> WallCommand(useCases, command)
             else -> ReadPostCommnad(useCases, command)
         }

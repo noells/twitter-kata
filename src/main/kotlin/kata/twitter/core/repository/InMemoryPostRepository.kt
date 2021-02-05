@@ -11,6 +11,7 @@ class InMemoryPostRepository: PostRepository {
         } else {
             posts[post.owner] = mutableListOf(post)
         }
+
     }
 
     override fun getBy(id: String) = this.posts.values.flatten()
